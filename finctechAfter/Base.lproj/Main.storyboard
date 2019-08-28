@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PqB-I9-8dt">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="finctechAfter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ProfileViewController" customModule="finctechAfter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -89,7 +89,89 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+            <point key="canvasLocation" x="337" y="-368"/>
+        </scene>
+        <!--Tinkoff Chat-->
+        <scene sceneID="mec-0z-iN6">
+            <objects>
+                <tableViewController id="Fom-UV-oRG" customClass="ConversationsListViewController" customModule="finctechAfter" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="6YF-ch-Sr3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="100" id="c9b-dZ-wyi" customClass="ConversationsListViewCell" customModule="finctechAfter" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="c9b-dZ-wyi" id="E0X-IL-7u9">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99.666666666666671"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XIZ-KM-rHt">
+                                            <rect key="frame" x="274" y="16" width="85" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="last message" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwX-tL-igt">
+                                            <rect key="frame" x="16" y="45" width="343" height="38.666666666666657"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LAC-ak-2Wk">
+                                            <rect key="frame" x="16" y="16" width="250" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="LAC-ak-2Wk" firstAttribute="leading" secondItem="E0X-IL-7u9" secondAttribute="leading" constant="16" id="LbN-kQ-hcy"/>
+                                        <constraint firstAttribute="trailing" secondItem="XIZ-KM-rHt" secondAttribute="trailing" constant="16" id="P9j-WX-fkb"/>
+                                        <constraint firstItem="hwX-tL-igt" firstAttribute="leading" secondItem="E0X-IL-7u9" secondAttribute="leading" constant="16" id="StS-Mb-1Ey"/>
+                                        <constraint firstItem="LAC-ak-2Wk" firstAttribute="top" secondItem="E0X-IL-7u9" secondAttribute="top" constant="16" id="TLk-vv-g9m"/>
+                                        <constraint firstItem="XIZ-KM-rHt" firstAttribute="leading" relation="lessThanOrEqual" secondItem="LAC-ak-2Wk" secondAttribute="trailing" constant="8" id="crl-XP-cNg"/>
+                                        <constraint firstItem="LAC-ak-2Wk" firstAttribute="width" secondItem="E0X-IL-7u9" secondAttribute="width" multiplier="4:6" id="cys-U7-9rG"/>
+                                        <constraint firstAttribute="bottom" secondItem="hwX-tL-igt" secondAttribute="bottom" constant="16" id="jfA-OJ-qMv"/>
+                                        <constraint firstAttribute="trailing" secondItem="hwX-tL-igt" secondAttribute="trailing" constant="16" id="luZ-Hq-Jnx"/>
+                                        <constraint firstItem="hwX-tL-igt" firstAttribute="top" secondItem="LAC-ak-2Wk" secondAttribute="bottom" constant="8" id="pxp-v2-PHu"/>
+                                        <constraint firstItem="XIZ-KM-rHt" firstAttribute="top" secondItem="E0X-IL-7u9" secondAttribute="top" constant="16" id="z8V-cP-ZrS"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dateLabel" destination="XIZ-KM-rHt" id="Beu-sj-sPf"/>
+                                    <outlet property="lastMessageLabel" destination="hwX-tL-igt" id="WnO-09-atw"/>
+                                    <outlet property="nameLabel" destination="LAC-ak-2Wk" id="Ztm-rR-Z5B"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Fom-UV-oRG" id="JYF-qA-4mW"/>
+                            <outlet property="delegate" destination="Fom-UV-oRG" id="Z8z-2d-clq"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Tinkoff Chat" id="H77-Br-33O"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wor-gH-SFP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1049" y="327"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kiQ-eu-PT3">
+            <objects>
+                <navigationController id="PqB-I9-8dt" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zBJ-IS-THm">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Fom-UV-oRG" kind="relationship" relationship="rootViewController" id="F5G-6H-DA6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gMM-pq-eA2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="338" y="327"/>
         </scene>
     </scenes>
     <resources>
